@@ -16,7 +16,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -61,7 +61,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-style: Regular;
   font-size: 18px;
@@ -106,8 +106,8 @@ ol {
   opacity: 1;
 }
 
-button {
-  font-family: Fira Sans Condensed, sans-serif;
+.button {
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-style: Bold;
   font-size: 18px;
@@ -117,6 +117,20 @@ button {
   border: 1px solid #fff;
   color: #fff;
   background: transparent;
+}
+
+.button:active {
+  background-color: rgba(84, 80, 80, 1);
+}
+
+.button:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__submit-button{
@@ -149,48 +163,40 @@ button {
   gap: 1.5px;
 }
 
-input {
+.search-form__textfield {
   width: 225px;
   height: 27px;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-style: Regular;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
+  color: #fff;
   background-color: #1b1919;
-  color: rgba(255, 255, 255, 0.7);
   padding: 2.5px 14px 2.5px 0px;
   border: 1px solid rgba(255, 255, 255, 1); 
   border-left: none;
   border-right: none;
   appearance: none;
-}
-
-input{
   outline: none;
-}
-
-input[type="text"]:focus {
-  color: #fff;
 }
 
 .search-form__label:has(:focus-visible)  {
   border: 1px solid rgba(255, 255, 255, 1);
-  padding: 1px 1px;
 }
 
 .search-form__textfield::placeholder{
  color: rgb(255 255 255 / 0.7);
 }
 
-.content__details {     /* не знаю как решить проблему с нижней полосой прокрутки :( */
+.content__details {
   width: 100%;
   height: 100%;
   }
 
 .title {
-  font-family: Oswald, sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-style: Bold;
   font-size: 75px;
@@ -208,7 +214,7 @@ input[type="text"]:focus {
 .content__list-container {
   position: relative;
   height: 298px;
-  overflow: scroll; 
+  overflow-y: auto;
   margin-top: 26px;
 }
 
@@ -221,20 +227,6 @@ input[type="text"]:focus {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-}
-
-.search-form__submit-button:active {
-  background-color: rgba(84, 80, 80, 1);
-}
-
-.search-form__submit-button:hover{
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.search-form__submit-button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
 }
 
 .content__list {
@@ -258,7 +250,7 @@ input[type="text"]:focus {
   align-items: flex-start;
 }
 
-.content__video-card:active {
+.content__card-link:active {
   background-color: rgba(84, 80, 80, 1);
 }
 
@@ -285,7 +277,7 @@ input[type="text"]:focus {
 
 .content__video-card-title {
   width: 196px;
-  font-family: Oswald, sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-style: Bold;
   font-size: 30px;
@@ -296,15 +288,12 @@ input[type="text"]:focus {
   margin-bottom: 2px;
 }
 
-.content__video-card-description {
-  padding-bottom: 5px;
-}
-
 .content__video-card-thumbnail {
   width:194px; 
   height: 103px; 
   object-fit: cover;
   object-position:  center;
+  max-width: 100%;
 }
 
 .content__video-card-description {
@@ -314,7 +303,7 @@ input[type="text"]:focus {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
-  font-family: Fira Sans Condensed, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-style: Regular;
   font-size: 18px;
