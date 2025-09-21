@@ -250,6 +250,10 @@ ol {
   align-items: flex-start;
 }
 
+.content__card-link {
+  display: block;
+}
+
 .content__card-link:active {
   background-color: rgba(84, 80, 80, 1);
 }
@@ -265,7 +269,7 @@ ol {
   outline: 1px solid #fff;
 }
 
-.content__list-item:has(.content__card-link_current) {
+.content__card-link_current {
   background-color: rgba(84, 80, 80, 1);
 }
 
